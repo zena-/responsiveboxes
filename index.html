@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> responsive boxes</title>
+    <style>
+        *{margin: 0;}
+        .pink{background-color: #FFADAD;}
+        .border{border: 1px solid #535353;}
+        .t30withandheighth{height:330px; width:330px;}
+        .t40withandheighth{height:440px; width:440px;}
+        .t60withandheighth{height:660px; width:660px;}
+        .purple{background-color: #ADB3FF}
+        .wrapper {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(330px,0fr));
+          grid-template-rows: repeat(auto-fill, minmax(330px,0fr));
+        }
+        .wrapper2{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(440px,0fr));
+        }
+        .wrapper3{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(330px,0fr));
+            grid-template-rows: repeat(auto-fill, minmax(0px,0fr));
+        }
+        .wrapper > div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrapper2 > div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrapper3 > div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item1 {
+          grid-column: 1;
+          grid-row: 1;
+        }
+        .item2 { 
+          grid-column: 2;
+          grid-row: 1;
+        }
+        .item3 {
+          grid-column: 3;
+          grid-row: 1/2;
+        }
+        .item4 {
+          grid-column: 1;
+          grid-row: 2;
+        }
+        .item5 {
+          grid-column: 2;
+          grid-row: 2;
+        }
+        .item6 {
+          grid-column: 1;
+          grid-row: 3;
+        }
+        .item7 {
+          grid-column: 2;
+          grid-row: 3;
+        }
+        .item8 { 
+          grid-column: 3;
+          grid-row: 3;
+        }
+        .item9 {
+          grid-column: 1;
+          grid-row: 4;
+        }
+        .item10 {
+          grid-column: 2;
+          grid-row: 4;
+        }
+        .item11 {
+          grid-column: 3;
+          grid-row: 4;
+        }
+        .item12 {
+          grid-column: 4;
+          grid-row: 4;
+        }
+        .marg {
+            margin:40px;
+        }
+        @media only screen and (max-width: 730px){
+            .marg {margin:20px;}
+            .small165{height:165px; width:165px;}
+            .small330{height:330px; width:330px;}
+
+            .wrapper {
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(165px,0fr));
+              grid-template-rows: repeat(auto-fill, minmax(165px,0fr));
+            }
+            .wrapper2{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(165px,0fr));
+            }
+            .wrapper3{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(165px,0fr));
+            }
+            .item1 {
+              grid-column: 1;
+              grid-row: 1;
+            }
+            .item2 { 
+              grid-column: 2;
+              grid-row: 1;
+            }
+            .item3 {
+              grid-column: 1/2;
+              grid-row: 2/3;
+            }
+            .item4 {
+              grid-column: 1;
+              grid-row: 4;
+            }
+            .item5 {
+              grid-column: 2;
+              grid-row: 4;
+            }
+            .item6 {
+              grid-column: 1;
+              grid-row: 5;
+            }
+            .item7 {
+              grid-column: 2;
+              grid-row: 5;
+            }
+            .item8 { 
+              grid-column: 1/2;
+              grid-row: 6/7;
+            }
+            .item9 {
+              grid-column: 1;
+              grid-row: 8;
+            }
+            .item10 {
+              grid-column: 2;
+              grid-row: 8;
+            }
+            .item11 {
+              grid-column: 1;
+              grid-row: 9;
+            }
+            .item12 {
+              grid-column: 2;
+              grid-row: 9;
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <div class="marg">
+            <div class="wrapper" >
+                <div class="item1 pink border t30withandheighth small165">1</div>
+                <div class="item2 pink border t30withandheighth small165">2</div>
+                <div class="item3 purple border t60withandheighth small330">3</div>
+                <div class="item4 pink border t30withandheighth small165">4</div>
+                <div class="item5 pink border t30withandheighth small165">5</div>
+            </div>
+            <div class="wrapper2">
+                <div class="item6 pink t40withandheighth border small165">6</div>
+                <div class="item7 pink t40withandheighth border small165">7</div>
+                <div class="item8 purple t40withandheighth border small330">8</div>
+            </div>
+            <div class="wrapper3">
+                <div class="item9 pink border t30withandheighth small165">9</div>
+                <div class="item10 pink border t30withandheighth small165">10</div>
+                <div class="item11 pink border t30withandheighth small165">11</div>
+                <div class="item12 pink border t30withandheighth small165">12</div>
+            </div>
+        </div>
+    </body>
+</html>
